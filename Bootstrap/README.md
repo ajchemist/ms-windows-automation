@@ -192,3 +192,9 @@ Add-BitLockerKeyProtector $env:SystemDrive -RecoveryPasswordProtector
 
 - https://github.com/W4RH4WK/Debloat-Windows-10
 - https://github.com/W4RH4WK/Debloat-Windows-10/blob/master/scripts/remove-onedrive.ps1
+
+
+# Confirmed Working on:
+
+
+- w11 21h2
