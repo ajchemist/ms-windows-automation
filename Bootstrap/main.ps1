@@ -27,6 +27,12 @@ Import-Module "$selfdir\w10.psm1" -Force
 & "$selfdir\Script\profile_list.ps1" -ParentPath $DataDrive.root
 
 
+# ** WindowsUpdate
+
+
+Disable-WindowsUpdate
+
+
 # ** TermSRV
 
 

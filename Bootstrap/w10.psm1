@@ -21,6 +21,16 @@ Function Set-ProfileListParentPath
 }
 
 
+# * Windows Update
+
+
+Function Disable-WindowsUpdate
+{
+    New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Force
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoUpdate" -Type DWord -Value 1 -Force
+}
+
+
 # * Remote Desktop Protocol
 
 
