@@ -20,7 +20,7 @@ Import-Module "$selfdir\w10.psm1" -Force
 
 Write-Host "Choose DATA Drive..."
 $DataDrive = (Get-PSDrive -PSProvider FileSystem | Out-GridView -PassThru)
-if ((Get-Item $ProfileListProperty.ProfilesDirectory).root -ne $DataDrive.root) {
+if ((Get-Item $ProfileListProperty.ProfilesDirectory).root.Name -ne $DataDrive.root) {
     Write-Host "* Run subscript: profile_list.ps1"
     & "$selfdir\Script\profile_list.ps1" -ParentPath $DataDrive.root
 }
